@@ -11,8 +11,8 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends AppCompatActivity {
-//    public String FliePath = "/sys/class/yk_d6t/yk_d6t";//温度传感器
-    public String FliePath = "/sys/class/gpio_getVal/gpio_getVal";//电平检测
+    public String FliePath = "/sys/class/yk_d6t/yk_d6t";//温度传感器
+//    public String FliePath = "/sys/class/gpio_getVal/gpio_getVal";//电平检测
     public TextView textView = null;
     private String value = null;
 
@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(this,500);//设置循环时间，此处是0.5秒
             //需要执行的代码
             value = readFile(FliePath);
-            textView.setText("电平为：" + value);//电平检测
-//            textView.setText("此时温度为：" + value);//温度检测
+//            textView.setText("电平为：" + value);//电平检测
+            textView.setText("此时温度为：" + value);//温度检测
         }
     };
 
